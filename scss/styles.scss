@@ -1,0 +1,108 @@
+$ebony: hsl(233, 47%, 7%);
+$port-gore: hsl(244, 38%, 16%);
+$violet: hsl(277, 64%, 61%);
+$light-violet: hsl(277, 64%, 61%, .5);
+$white: hsl(0, 0%, 100%);
+$light-white: hsl(0, 0%, 100%, .75);
+$lighter-white: hsl(0, 0%, 100%, .6);
+
+$font-size: .93rem;
+$radius: 20px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    min-height: 100%;
+    font-family: "Intel", sans-serif;
+    background: $ebony;
+}
+
+main {
+    .container {
+        width: 375px;
+        margin: 150px auto;
+    }
+
+    .image-container {
+        position: relative;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        background-image: url("../images/image-header-mobile.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 275px;
+        background-size: contain;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $light-violet;
+            border-top-left-radius: $radius;
+            border-top-right-radius: $radius;
+        }
+    }
+
+    .details {
+        background: $port-gore;
+        padding: 3em;
+        font-size: .94rem;
+        text-align: center;
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+
+        &__heading {
+            color: $white;
+            font-size: 1.8rem;
+            margin-bottom: 0.5em;
+            
+            .highlight {
+                color: $violet;
+            }
+        }
+        
+        &__description {
+            color: $light-white;
+            line-height: 1.6;
+            margin-bottom: 3em;
+        }
+
+        &__stats {
+            list-style-type: none;
+
+            li {
+                color: $white;
+                font-size: 1.5rem;
+                margin-bottom: 1.2em;
+                font-weight: 700;
+                
+                .stat-type {
+                    letter-spacing: 1.3px;
+                    display: block;
+                    font-size: .7rem;
+                    color: $lighter-white;
+                    margin-top: .2em;
+                    font-family: 'Lexend Deca', sans-serif;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
