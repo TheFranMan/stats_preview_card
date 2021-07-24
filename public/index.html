@@ -15,7 +15,12 @@
 <body>
     <main>
         <div class="image-container">
-            <img src="images/image-header-mobile.jpg" alt="">
+            <img
+                src="images/image-header-mobile.jpg"
+                srcset="images/image-header-mobile.jpg 654w,
+                        images/image-header-desktop.jpg 540w"
+                sizes="(min-width: 1024px) 540px, 654px"
+                alt="">
         </div>
         <section class="details">
             <h2 class="details__heading">Get <span class="highlight">insights</span> that help your business grow.</h2>
