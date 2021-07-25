@@ -62,7 +62,7 @@ main {
 
         @media(min-width: $min) {
             order: 2;
-            width: 50%;
+            width: 48%;
             border-top-left-radius: 0;
             border-top-right-radius: $radius;
             border-bottom-right-radius: $radius;
@@ -91,7 +91,7 @@ main {
             flex-direction: column;
             text-align: left;
             order: 1;
-            width: 50%;
+            width: 52%;
             padding: 4.5em;
         }
 
@@ -116,45 +116,51 @@ main {
         }
 
         &__stats {
-            list-style-type: none;
-
             @media(min-width: $min) {
-                display: flex;
-                justify-content: space-between;
                 margin-top: auto;
             }
 
-            @media(min-width: $large) {
-                justify-content: initial;
-            }
-
-            &__item {
-                margin-bottom: 1.5em;
-                font-size: $fz-large;
-                font-weight: 700;
-
+            &__items {
+                list-style-type: none;
+    
                 @media(min-width: $min) {
-                    margin-bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
                 }
-                
+    
                 @media(min-width: $large) {
-                    margin-right: 2.75em;
+                    justify-content: initial;
                 }
-        
-                &:last-child {
-                    margin-bottom: 0;
-                    margin-right: 0
+    
+                &__item {
+                    margin-bottom: 1.5em;
+                    font-size: $fz-large;
+                    font-weight: 700;
+    
+                    @media(min-width: $min) {
+                        margin-bottom: 0;
+                    }
+                    
+                    @media(min-width: $large) {
+                        margin-right: 2.75em;
+                    }
+            
+                    &:last-child {
+                        margin-bottom: 0;
+                        margin-right: 0
+                    }
+                    
+                    .stat-type {
+                        display: block;
+                        font-size: $fz-small;
+                        font-weight: 400;
+                        color: $light-white;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        margin-top: .8em;
+                    }
                 }
-                
-                .stat-type {
-                    display: block;
-                    font-size: $fz-small;
-                    font-weight: 400;
-                    color: $light-white;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    margin-top: .8em;
-                }
+
             }
         }
     }

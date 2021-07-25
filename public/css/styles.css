@@ -41,7 +41,7 @@ main .image-container {
 @media (min-width: 1024px) {
   main .image-container {
     order: 2;
-    width: 50%;
+    width: 48%;
     border-top-left-radius: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -68,7 +68,7 @@ main .details {
     flex-direction: column;
     text-align: left;
     order: 1;
-    width: 50%;
+    width: 52%;
     padding: 4.5em;
   }
 }
@@ -90,41 +90,45 @@ main .details__description {
   margin-bottom: 2.5em;
   line-height: 1.8;
 }
-main .details__stats {
-  list-style-type: none;
-}
 @media (min-width: 1024px) {
   main .details__stats {
-    display: flex;
-    justify-content: space-between;
     margin-top: auto;
   }
 }
+main .details__stats__items {
+  list-style-type: none;
+}
+@media (min-width: 1024px) {
+  main .details__stats__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 @media (min-width: 1100px) {
-  main .details__stats {
+  main .details__stats__items {
     justify-content: initial;
   }
 }
-main .details__stats__item {
+main .details__stats__items__item {
   margin-bottom: 1.5em;
   font-size: 1.5rem;
   font-weight: 700;
 }
 @media (min-width: 1024px) {
-  main .details__stats__item {
+  main .details__stats__items__item {
     margin-bottom: 0;
   }
 }
 @media (min-width: 1100px) {
-  main .details__stats__item {
+  main .details__stats__items__item {
     margin-right: 2.75em;
   }
 }
-main .details__stats__item:last-child {
+main .details__stats__items__item:last-child {
   margin-bottom: 0;
   margin-right: 0;
 }
-main .details__stats__item .stat-type {
+main .details__stats__items__item .stat-type {
   display: block;
   font-size: 0.75rem;
   font-weight: 400;
